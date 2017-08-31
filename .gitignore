@@ -9,6 +9,7 @@
 
 #idea profile
 .idea/
+out/
 
 # BlueJ files
 *.ctxt
