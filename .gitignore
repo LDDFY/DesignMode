@@ -4,6 +4,9 @@
 # Log file
 *.log
 
+#Eclipse profile
+.metadata/
+
 # BlueJ files
 *.ctxt
 
