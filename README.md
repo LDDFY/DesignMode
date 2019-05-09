@@ -15,3 +15,6 @@
 1. 创建型：Factory Method(工厂方法)、 Abstract Factory(抽象工厂)、 Builder(建造者)、 Prototype(原型)、 Singleton(单例)
 2. 结构型：Adapter Class/Object(适配器)、Bridge(桥接)、Composite(组合)、Decorator(装饰)、Facade(外观)、FlyWeight(享元)、Proxy(代理)
 3. 行为型：Interpreter(解释器)、Template Method(模板方法)、Chain of Responsibility(责任链)、Command(命令)、Iterator(迭代器)、Mediator(中介者)、Memento(备忘录)、Observer(观察者)、State(状态)、Strategy(策略)、Visitor(访问者)
+
+### [单例模式](doc/Proxy.md)
+### [代理模式](doc/Singletone.md)

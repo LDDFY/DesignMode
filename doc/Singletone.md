@@ -23,11 +23,11 @@
 
 #### 实现方式：
 
-* [饿汉式](EagerSingleton.java)
-* [懒汉式](LazySingleton.java)
-* [双检索（DCL）](DCLSingleton.java)
-* [占位符式}](PlaceholderSingleton.java)
-* [枚举式](EnumSingleton.java)
+* [饿汉式](../src/singletone/EagerSingleton.java)
+* [懒汉式](../src/singletone/LazySingleton.java)
+* [双检索（DCL）](../src/singletone/DCLSingleton.java)
+* [占位符式}](../src/singletone/PlaceholderSingleton.java)
+* [枚举式](../src/singletone/EnumSingleton.java)
 
 #### 各种实现方式的优缺点
 * 饿汉式：饿汉模式在类加载的时候就对实例进行创建，实例在整个程序周期都存在。它的好处是只在类加载的时候创建一次实例，不会存在多个线程创建多个实例的情况，避免了多线程同步的问题。它的缺点也很明显，即使这个单例没有用到也会被创建，而且在类加载之后就被创建，内存就被浪费了，当一个系统中存在大量此模式单例并且单例处理业务比较负责时启动会变慢。
