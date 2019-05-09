@@ -36,7 +36,7 @@ public class DCLSingleton implements Serializable {
         //使用本地变量减少对volatile变量的访问，这样可以使得这个单例的整体性能提升25%
         //https://en.m.wikipedia.org/wiki/Double-checked_locking?from=singlemessage&isappinstalled=0#Usage_in_Java
         DCLSingleton localRef = instance;
-        if (null == instance) {
+        if (null == localRef) {
             synchronized (DCLSingleton.class) {
                 localRef = instance;
                 if (null == localRef) {
