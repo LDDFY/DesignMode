@@ -1,25 +1,30 @@
 package builder;
 
+/**
+ * 飞机建造接口
+ *
+ * @author changhao
+ */
 public interface Builder {
-	
-	/**
-	 * 创建部件A
-	 */
-	public void builderPartA();
-	
-	/**
-	 * 创建部件B
-	 */
-	public void builderPartB();
-	
-	/**
-	 * 创建部件C
-	 */
-	public void builderPartC();
-	
-	/**
-	 * 返回组装结果
-	 */
-	public Product getResult();
+    /**
+     * 安装轮子
+     */
+    void buildeWheel();
 
+    /**
+     * 安装引擎
+     */
+    void buildeEngine();
+
+    /**
+     * 组装整体结构
+     */
+    void buildeStructure();
+
+    /**
+     * 生成对象
+     *
+     * @return
+     */
+    Plane builde();
 }
