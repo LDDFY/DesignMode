@@ -18,3 +18,4 @@
 
 ### [单例模式](doc/Proxy.md)
 ### [代理模式](doc/Singletone.md)
+### [建造者模式](doc/Builder.md)
