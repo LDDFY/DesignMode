@@ -28,6 +28,13 @@
 3. 只在必要的时候使用装饰者模式，否则会提高程序的复杂性，增加系统维护难度。
  
 ### 示例代码
+[装饰者模式](../src/decorator/PancakeTest.java)
 
 ### 实例
- 
+java.io.InputStream 实现机制:
+
+    1.抽象构件(Component)角色：由InputStream扮演。这是一个抽象类，为各种子类型提供统一的接口。
+    2.具体构件(ConcreteComponent)角色：由ByteArrayInputStream、FileInputStream、PipedInputStream、StringBufferInputStream等类扮演。它们实现了抽象构件角色所规定的接口。
+    3.抽象装饰(Decorator)角色：由FilterInputStream扮演。它实现了InputStream所规定的接口。
+    4.具体装饰(ConcreteDecorator)角色：由几个类扮演，分别是BufferedInputStream、DataInputStream以及两个不常用到的类LineNumberInputStream、PushbackInputStream。
+
