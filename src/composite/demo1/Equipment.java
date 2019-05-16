@@ -2,34 +2,57 @@ package composite.demo1;
 
 import java.util.Iterator;
 
+/**
+ * 设备基础抽象类（Component）
+ *
+ * @author changhao
+ */
 public abstract class Equipment {
 
-	private String name;
+    /**
+     * 设备名称
+     */
+    private String name;
 
-	public Equipment(String name) {
-		this.name = name;
-	}
+    public Equipment(String name) {
+        this.name = name;
+    }
 
-	// 网络价格
-	public abstract double netPrice();
+    /**
+     * 网络价格
+     *
+     * @return
+     */
+    protected abstract double netPrice();
 
-	// 折扣价格
-	public abstract double discountPrice();
+    /**
+     * 折扣价格
+     *
+     * @return
+     */
+    protected abstract double discountPrice();
 
-	// 添加部件方法
-	public boolean add(Equipment equipment) {
-		System.out.println(name+":");
-		return false;
-	}
+    /**
+     * 添加设备
+     *
+     * @param equipment
+     * @return
+     */
+    protected abstract boolean add(Equipment equipment);
 
-	// 删除部件方法
-	public boolean remove(Equipment equipment) {
-		return false;
-	}
+    /**
+     * 删除设备方法
+     *
+     * @param equipment
+     * @return
+     */
+    protected abstract boolean remove(Equipment equipment);
 
-	// 访问组合体类方法
-	public Iterator<Equipment> iterator() {
-		return null;
-	}
+    /**
+     * 访问设备方法
+     *
+     * @return
+     */
+    protected abstract Iterator<Equipment> iterator();
 
 }

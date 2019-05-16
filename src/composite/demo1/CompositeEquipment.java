@@ -3,58 +3,53 @@ package composite.demo1;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.NoSuchElementException;
 
+/**
+ * 设备组合类
+ *
+ * @author changhao
+ */
 public class CompositeEquipment extends Equipment {
 
-	private int i = 0;
-	private List<Equipment> equipments = new ArrayList<Equipment>();
+    private List<Equipment> equipments;
 
-	public CompositeEquipment(String name) {
-		super(name);
-	}
+    public CompositeEquipment(String name) {
+        super(name);
+        equipments = new ArrayList<>();
+    }
 
-	public boolean add(Equipment e) {
-		this.equipments.add(e);
-		return true;
-	}
+    @Override
+    public boolean add(Equipment e) {
+        return this.equipments.add(e);
+    }
 
-	@Override
-	public double netPrice() {
-		double netPrice = 0.0;
-		Iterator<Equipment> it = equipments.iterator();
-		while (it.hasNext()) {
-			netPrice += it.next().netPrice();
-		}
-		return netPrice;
-	}
+    @Override
+    protected boolean remove(Equipment equipment) {
+        return this.equipments.remove(equipment);
+    }
 
-	@Override
-	public double discountPrice() {
-		double discountPrice = 0.0;
-		Iterator<Equipment> it = equipments.iterator();
-		while (it.hasNext()) {
-			discountPrice += it.next().discountPrice();
-		}
-		return discountPrice;
-	}
+    @Override
+    public double netPrice() {
+        double sum = 0.0;
+        Iterator<Equipment> it = iterator();
+        while (it.hasNext()) {
+            sum += it.next().netPrice();
+        }
+        return sum;
+    }
 
-	@Override
-	public Iterator<Equipment> iterator() {
-		// TODO Auto-generated method stub
-		return equipments.iterator();
-	}
+    @Override
+    public double discountPrice() {
+        double sum = 0.0;
+        Iterator<Equipment> it = iterator();
+        while (it.hasNext()) {
+            sum += it.next().discountPrice();
+        }
+        return sum;
+    }
 
-	public boolean hasNext() {
-		return i < equipments.size();
-	}
-
-	public Object next() {
-		
-		if (hasNext()) {
-			return equipments.get(i++);
-		} else {
-			throw new NoSuchElementException();
-		}
-	}
+    @Override
+    public Iterator<Equipment> iterator() {
+        return equipments.iterator();
+    }
 }
