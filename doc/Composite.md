@@ -26,3 +26,8 @@
 
 ##### 缺点
 1. 使设计变得更加抽象，对象的业务规则如果很复杂，则实现组合模式具有很大挑战性，而且不是所有的方法都与叶子对象子类都有关联
+
+#### 实例
+1. java.util.Map#putAll(Map)
+2. java.util.List#addAll(Collection)
+3. java.util.Set#addAll(Collection)
