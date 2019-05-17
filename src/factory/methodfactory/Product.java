@@ -7,7 +7,7 @@
  * 修改历史：
  *  2019年-05月-17日  - changhao - 创建。
  */
-package factory.abstractfactory;
+package factory.methodfactory;
 
 /**
  * 产品接口
