@@ -29,8 +29,11 @@ public class CompositeFlyWeightTest {
     list.add("b");
 
     FlyWeightCompositeFactory factory = new FlyWeightCompositeFactory();
+    // 组合享元对象1
     FlyWeight f1 = factory.factory(list);
+    // 组合享元对象2
     FlyWeight f2 = factory.factory(list);
+
     f1.operation("Composite Call");
     System.out.println("=======");
     System.out.println("复合享元模式是否可以共享对象：" + (f1 == f2));
@@ -39,5 +42,10 @@ public class CompositeFlyWeightTest {
     FlyWeight f3 = factory.factory(str);
     FlyWeight f4 = factory.factory(str);
     System.out.println("单纯享元模式是否可以共享对象：" + (f3 == f4));
+
+    System.out.println("f1.operation：");
+    f1.operation(str);
+    System.out.println("f2.operation：");
+    f2.operation(str);
   }
 }
