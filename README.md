@@ -14,4 +14,4 @@
 设计模式一共可以分为23种，3大类：
 1. 创建型：Factory Method([工厂方法](doc/Factory.md))、 Abstract Factory([抽象工厂](doc/Factory.md))、 Builder([建造者](doc/Builder.md))、 Prototype([原型](doc/Prototype.md))、 Singleton([单例](doc/Proxy.md))
 2. 结构型：Adapter Class/Object([适配器](doc/Adapter.md))、Bridge([桥接](doc/Bridge.md))、Composite([组合](doc/Composite.md))、Decorator([装饰](doc/Decorator.md))、Facade([外观](doc/Facade.md))、FlyWeight([享元](doc/Flyweight.md))、Proxy([代理](doc/Singletone.md))
-3. 行为型：Interpreter(解释器)、Template Method(模板方法)、Chain of Responsibility(责任链)、Command(命令)、Iterator(迭代器)、Mediator(中介者)、Memento(备忘录)、Observer([观察者](doc/Observer.md))、State([状态](doc/State.md))、Strategy(策略)、Visitor(访问者)
+3. 行为型：Interpreter(解释器)、Template Method(模板方法)、Chain of Responsibility(责任链)、Command(命令)、Iterator(迭代器)、Mediator(中介者)、Memento([备忘录](doc/Memento.md))、Observer([观察者](doc/Observer.md))、State([状态](doc/State.md))、Strategy(策略)、Visitor(访问者)
