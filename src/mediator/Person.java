@@ -10,14 +10,16 @@
 package mediator;
 
 /**
+ * 抽象同事类
+ *
  * @author changhao
  */
 public abstract class Person {
-  protected String name;
-  protected Mediator meidator;
+    protected String name;
+    protected Mediator meidator;
 
-  public Person(String name, Mediator meidator) {
-    this.name = name;
-    this.meidator = meidator;
-  }
+    public Person(String name, Mediator meidator) {
+        this.name = name;
+        this.meidator = meidator;
+    }
 }

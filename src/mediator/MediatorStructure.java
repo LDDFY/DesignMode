@@ -13,20 +13,22 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
+ * 具体中介者
+ *
  * @author changhao
  */
 @Getter
 @Setter
 public class MediatorStructure implements Mediator {
-  private HouseOwner houseOwner;
-  private Tenant tenant;
+    private HouseOwner houseOwner;
+    private Tenant tenant;
 
-  @Override
-  public void contact(String message, Person person) {
-    if (person == houseOwner) {
-      tenant.getMessage(message);
-    } else {
-      houseOwner.getMessage(message);
+    @Override
+    public void contact(String message, Person person) {
+        if (person == houseOwner) {
+            tenant.getMessage(message);
+        } else {
+            houseOwner.getMessage(message);
+        }
     }
-  }
 }

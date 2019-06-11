@@ -11,16 +11,16 @@ package mediator;
 
 /**
  * 抽象中介者
- * 
+ *
  * @author changhao
  */
 public interface Mediator {
 
-  /**
-   * 联系信息
-   * 
-   * @param message
-   * @param person
-   */
-  void contact(String message, Person person);
+    /**
+     * 联系信息
+     *
+     * @param message
+     * @param person
+     */
+    void contact(String message, Person person);
 }

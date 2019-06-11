@@ -8,7 +8,7 @@
 3. 管理人（Caretaker）：负责备忘录Memento，不能对Memento的内容进行访问或者操作。
 
 ### 示例代码
-1. [备忘录模式]()
+1. [备忘录模式](../src/memento/MementoTest.java)
 
 #### 优缺点
 ##### 优点

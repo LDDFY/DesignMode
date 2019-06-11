@@ -10,23 +10,24 @@
 package mediator;
 
 /**
+ * 具体同事类-房主
+ *
  * @author changhao
  */
 public class HouseOwner extends Person {
 
-  public HouseOwner(String name, Mediator meidator) {
-    super(name, meidator);
-  }
+    public HouseOwner(String name, Mediator meidator) {
+        super(name, meidator);
+    }
 
-  /**
-   * 
-   * @param message
-   */
-  public void contact(String message) {
-    meidator.contact(message, this);
-  }
+    /**
+     * @param message
+     */
+    public void contact(String message) {
+        meidator.contact(message, this);
+    }
 
-  public void getMessage(String message) {
-    System.out.println("HouseOwner : " + name + ", Get Message: " + message);
-  }
+    public void getMessage(String message) {
+        System.out.println("HouseOwner : " + name + ", Get Message: " + message);
+    }
 }

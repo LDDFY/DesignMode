@@ -10,16 +10,18 @@
 package mediator;
 
 /**
+ * 中介者模式测试类
+ *
  * @author changhao
  */
 public class MediatorTest {
-  public static void main(String[] args) {
-    MediatorStructure mediator = new MediatorStructure();
-    HouseOwner houseOwner = new HouseOwner("qq", mediator);
-    Tenant tenant = new Tenant("jj", mediator);
-    mediator.setHouseOwner(houseOwner);
-    mediator.setTenant(tenant);
-    tenant.contact("I wanna a house");
-    houseOwner.contact("I have~");
-  }
+    public static void main(String[] args) {
+        MediatorStructure mediator = new MediatorStructure();
+        HouseOwner houseOwner = new HouseOwner("house owner", mediator);
+        Tenant tenant = new Tenant("tenant", mediator);
+        mediator.setHouseOwner(houseOwner);
+        mediator.setTenant(tenant);
+        tenant.contact("I wanna a house");
+        houseOwner.contact("I have ~");
+    }
 }
