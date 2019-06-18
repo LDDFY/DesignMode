@@ -1,10 +1,14 @@
 package iterator;
 
-import java.util.Collections;
 import java.util.List;
 
+/**
+ * 具体迭代器类实现
+ *
+ * @author LDDFY
+ */
 public class ConcreteIterator implements Iterator {
-    private List<Object> list = Collections.emptyList();
+    private List<Object> list;
     private int current = 0;
 
     public ConcreteIterator(List<Object> list) {

@@ -1,9 +1,26 @@
 package iterator;
 
+/**
+ * 抽象容器角色
+ *
+ * @author LDDFY
+ */
 public interface Aggregate {
-    public void add(Object obj);
+    /**
+     * 添加对象
+     * @param obj
+     */
+    void add(Object obj);
 
-    public void remove(Object obj);
+    /**
+     * 删除对象
+     * @param obj
+     */
+    void remove(Object obj);
 
-    public Iterator iterator();
+    /**
+     * 对象迭代器
+     * @return
+     */
+    Iterator iterator();
 }
