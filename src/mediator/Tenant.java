@@ -15,15 +15,15 @@ package mediator;
  * @author changhao
  */
 public class Tenant extends Person {
-    public Tenant(String name, Mediator meidator) {
-        super(name, meidator);
-    }
+  public Tenant(String name, Mediator meidator) {
+    super(name, meidator);
+  }
 
-    public void contact(String message) {
-        meidator.contact(message, this);
-    }
+  public void contact(String message) {
+    meidator.contact(message, this);
+  }
 
-    public void getMessage(String message) {
-        System.out.println("Tenant : " + name + ", Get Message: " + message);
-    }
+  public void getMessage(String message) {
+    System.out.println("Tenant : " + name + ", Get Message: " + message);
+  }
 }

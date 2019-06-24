@@ -15,13 +15,13 @@ package bridge;
  * @author changhao
  */
 public class CementRoad extends Road {
-    public CementRoad(Vehicle vehicle) {
-        super(vehicle);
-    }
+  public CementRoad(Vehicle vehicle) {
+    super(vehicle);
+  }
 
-    @Override
-    void driveOnRoad() {
-        vehicle.drive();
-        System.out.println("行驶在石子路...\n\t");
-    }
+  @Override
+  void driveOnRoad() {
+    vehicle.drive();
+    System.out.println("行驶在石子路...\n\t");
+  }
 }

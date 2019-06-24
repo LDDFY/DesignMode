@@ -16,10 +16,10 @@ package decorator;
  */
 public abstract class Condiment extends Pancake {
 
-    @Override
-    public abstract String getName();
+  @Override
+  public abstract String getName();
 
-    public void sold() {
-        System.out.println(getName() + ":" + getPrice());
-    }
+  public void sold() {
+    System.out.println(getName() + ":" + getPrice());
+  }
 }

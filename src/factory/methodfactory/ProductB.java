@@ -15,8 +15,8 @@ package factory.methodfactory;
  * @author changhao
  */
 public class ProductB implements Product {
-    @Override
-    public void display() {
-        System.out.println("这是最新产品B...\t\n");
-    }
+  @Override
+  public void display() {
+    System.out.println("这是最新产品B...\t\n");
+  }
 }

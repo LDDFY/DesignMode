@@ -15,8 +15,8 @@ package bridge;
  * @author changhao
  */
 public class Bus implements Vehicle {
-    @Override
-    public void drive() {
-        System.out.println("大巴...\t\n");
-    }
+  @Override
+  public void drive() {
+    System.out.println("大巴...\t\n");
+  }
 }

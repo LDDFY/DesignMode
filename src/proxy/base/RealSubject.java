@@ -15,8 +15,8 @@ package proxy.base;
  * @author changhao
  */
 public class RealSubject implements Subject {
-    @Override
-    public void doSomething() {
-        System.out.println("RealSubject do something...\t\n");
-    }
+  @Override
+  public void doSomething() {
+    System.out.println("RealSubject do something...\t\n");
+  }
 }

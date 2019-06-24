@@ -20,41 +20,42 @@ import java.util.List;
  */
 public abstract class Component {
 
-    public static final String SPLIT = "-->";
-    /**
-     * 名称
-     */
-    protected String name;
+  public static final String SPLIT = "-->";
+  /**
+   * 名称
+   */
+  protected String name;
 
-    public Component(String name) {
-        this.name = name;
-    }
+  public Component(String name) {
+    this.name = name;
+  }
 
-    /**
-     * 新建
-     *
-     * @param component
-     */
-    protected abstract void add(Component component);
+  /**
+   * 新建
+   *
+   * @param component
+   */
+  protected abstract void add(Component component);
 
-    /**
-     * 删除
-     *
-     * @param component
-     */
-    protected abstract void remove(Component component);
+  /**
+   * 删除
+   *
+   * @param component
+   */
+  protected abstract void remove(Component component);
 
-    /**
-     * 操作
-     *
-     * @param depth 节点深度
-     */
-    protected abstract void operation(int depth);
+  /**
+   * 操作
+   *
+   * @param depth
+   *          节点深度
+   */
+  protected abstract void operation(int depth);
 
-    /**
-     * 获取子类
-     *
-     * @return
-     */
-    protected abstract List<Component> getChildren();
+  /**
+   * 获取子类
+   *
+   * @return
+   */
+  protected abstract List<Component> getChildren();
 }

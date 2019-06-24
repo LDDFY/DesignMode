@@ -16,8 +16,8 @@ package proxy.base;
  */
 public interface Subject {
 
-    /**
-     * 做某些事情
-     */
-    void doSomething();
+  /**
+   * 做某些事情
+   */
+  void doSomething();
 }

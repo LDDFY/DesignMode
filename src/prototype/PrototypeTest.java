@@ -7,18 +7,18 @@ package prototype;
  */
 public class PrototypeTest {
 
-    public static void main(String[] args) throws CloneNotSupportedException {
-        ProtoType type = new ProtoType();
-        type.setCode("code");
-        type.setName("name");
-        ProtoType clone = type.clone();
+  public static void main(String[] args) throws CloneNotSupportedException {
+    ProtoType type = new ProtoType();
+    type.setCode("code");
+    type.setName("name");
+    ProtoType clone = type.clone();
 
-        System.out.println(type == clone);
-        System.out.println(type.getClass() == clone.getClass());
+    System.out.println(type == clone);
+    System.out.println(type.getClass() == clone.getClass());
 
-        clone.setName("B");
-        clone.setCode("B");
-        System.out.println(type == clone);
-    }
+    clone.setName("B");
+    clone.setCode("B");
+    System.out.println(type == clone);
+  }
 
 }

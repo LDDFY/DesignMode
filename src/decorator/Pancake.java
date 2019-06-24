@@ -17,21 +17,21 @@ import java.math.BigDecimal;
  * @author changhao
  */
 public abstract class Pancake {
-    protected String name;
+  protected String name;
 
-    /**
-     * 获取名称
-     *
-     * @return
-     */
-    public String getName() {
-        return this.name;
-    }
+  /**
+   * 获取名称
+   *
+   * @return
+   */
+  public String getName() {
+    return this.name;
+  }
 
-    /**
-     * 获取价格
-     *
-     * @return
-     */
-    public abstract BigDecimal getPrice();
+  /**
+   * 获取价格
+   *
+   * @return
+   */
+  public abstract BigDecimal getPrice();
 }

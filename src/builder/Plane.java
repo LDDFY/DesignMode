@@ -21,10 +21,10 @@ import lombok.ToString;
 @Data
 @ToString
 public class Plane {
-    //轮子
-    private String wheel;
-    //引擎
-    private String engine;
-    //结构
-    private String structure;
+  // 轮子
+  private String wheel;
+  // 引擎
+  private String engine;
+  // 结构
+  private String structure;
 }

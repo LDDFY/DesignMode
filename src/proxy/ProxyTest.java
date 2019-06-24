@@ -20,16 +20,16 @@ import proxy.base.SubjectProxy;
  */
 public class ProxyTest {
 
-    /**
-     * 基础代理
-     */
-    public static void baseTest() {
-        Subject subject = new RealSubject();
-        SubjectProxy proxy = new SubjectProxy(subject);
-        proxy.doSomething();
-    }
+  /**
+   * 基础代理
+   */
+  public static void baseTest() {
+    Subject subject = new RealSubject();
+    SubjectProxy proxy = new SubjectProxy(subject);
+    proxy.doSomething();
+  }
 
-    public static void main(String[] args) {
-        baseTest();
-    }
+  public static void main(String[] args) {
+    baseTest();
+  }
 }

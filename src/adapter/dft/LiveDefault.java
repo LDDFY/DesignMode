@@ -16,13 +16,13 @@ package adapter.dft;
  */
 public abstract class LiveDefault implements Live {
 
-    @Override
-    public void sleep() {
-        System.out.println("sleep默认实现...");
-    }
+  @Override
+  public void sleep() {
+    System.out.println("sleep默认实现...");
+  }
 
-    @Override
-    public void run() {
-        System.out.println("run默认实现...");
-    }
+  @Override
+  public void run() {
+    System.out.println("run默认实现...");
+  }
 }

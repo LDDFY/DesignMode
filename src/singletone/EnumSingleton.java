@@ -15,16 +15,16 @@ package singletone;
  * @author changhao
  */
 public enum EnumSingleton {
-    /**
-     * 用于初始化单例实例
-     */
-    INSTANCE;
+  /**
+   * 用于初始化单例实例
+   */
+  INSTANCE;
 
-    public EnumSingleton getInstance() {
-        return INSTANCE;
-    }
+  public EnumSingleton getInstance() {
+    return INSTANCE;
+  }
 
-    public void doSomething() {
-        System.out.println("枚举式 doSomething ...");
-    }
+  public void doSomething() {
+    System.out.println("枚举式 doSomething ...");
+  }
 }

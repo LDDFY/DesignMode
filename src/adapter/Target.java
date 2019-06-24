@@ -15,8 +15,8 @@ package adapter;
  * @author changhao
  */
 public interface Target {
-    /**
-     * 目标需要请求方法
-     */
-    void request();
+  /**
+   * 目标需要请求方法
+   */
+  void request();
 }

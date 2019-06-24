@@ -18,31 +18,30 @@ import java.io.Serializable;
  */
 public class EagerSingleton implements Serializable {
 
-    private static EagerSingleton instance = new EagerSingleton();
+  private static EagerSingleton instance = new EagerSingleton();
 
-    private EagerSingleton() {
-        //预防反射造成单例造成破坏
-        if (instance != null) {
-            throw new RuntimeException("不可使用构造方法实例化单例！");
-        }
+  private EagerSingleton() {
+    // 预防反射造成单例造成破坏
+    if (instance != null) {
+      throw new RuntimeException("不可使用构造方法实例化单例！");
     }
+  }
 
-    public static EagerSingleton getInstance() {
-        return instance;
-    }
+  public static EagerSingleton getInstance() {
+    return instance;
+  }
 
-    public void doSomething() {
-        System.out.println("饿汉模式 doSomething ...");
-    }
+  public void doSomething() {
+    System.out.println("饿汉模式 doSomething ...");
+  }
 
-
-    /**
-     * 保证枚举类不被序列化破坏，需要重写readResolve方法。
-     *
-     * @return
-     */
-    private Object readResolve() {
-        System.out.println("调用 EagerSingleton 的 readResolve 方法...");
-        return instance;
-    }
+  /**
+   * 保证枚举类不被序列化破坏，需要重写readResolve方法。
+   *
+   * @return
+   */
+  private Object readResolve() {
+    System.out.println("调用 EagerSingleton 的 readResolve 方法...");
+    return instance;
+  }
 }

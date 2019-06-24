@@ -11,45 +11,45 @@ import java.util.List;
  */
 public class CompositeEquipment extends Equipment {
 
-    private List<Equipment> equipments;
+  private List<Equipment> equipments;
 
-    public CompositeEquipment(String name) {
-        super(name);
-        equipments = new ArrayList<>();
-    }
+  public CompositeEquipment(String name) {
+    super(name);
+    equipments = new ArrayList<>();
+  }
 
-    @Override
-    public boolean add(Equipment e) {
-        return this.equipments.add(e);
-    }
+  @Override
+  public boolean add(Equipment e) {
+    return this.equipments.add(e);
+  }
 
-    @Override
-    protected boolean remove(Equipment equipment) {
-        return this.equipments.remove(equipment);
-    }
+  @Override
+  protected boolean remove(Equipment equipment) {
+    return this.equipments.remove(equipment);
+  }
 
-    @Override
-    public double netPrice() {
-        double sum = 0.0;
-        Iterator<Equipment> it = iterator();
-        while (it.hasNext()) {
-            sum += it.next().netPrice();
-        }
-        return sum;
+  @Override
+  public double netPrice() {
+    double sum = 0.0;
+    Iterator<Equipment> it = iterator();
+    while (it.hasNext()) {
+      sum += it.next().netPrice();
     }
+    return sum;
+  }
 
-    @Override
-    public double discountPrice() {
-        double sum = 0.0;
-        Iterator<Equipment> it = iterator();
-        while (it.hasNext()) {
-            sum += it.next().discountPrice();
-        }
-        return sum;
+  @Override
+  public double discountPrice() {
+    double sum = 0.0;
+    Iterator<Equipment> it = iterator();
+    while (it.hasNext()) {
+      sum += it.next().discountPrice();
     }
+    return sum;
+  }
 
-    @Override
-    public Iterator<Equipment> iterator() {
-        return equipments.iterator();
-    }
+  @Override
+  public Iterator<Equipment> iterator() {
+    return equipments.iterator();
+  }
 }

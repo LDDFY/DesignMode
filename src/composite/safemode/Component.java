@@ -17,18 +17,18 @@ package composite.safemode;
  * @author changhao
  */
 public abstract class Component {
-    public static final String SPLIT = "-->";
+  public static final String SPLIT = "-->";
 
-    protected String name;
+  protected String name;
 
-    public Component(String name) {
-        this.name = name;
-    }
+  public Component(String name) {
+    this.name = name;
+  }
 
-    /**
-     * 共有操作
-     *
-     * @param depth
-     */
-    protected abstract void operation(int depth);
+  /**
+   * 共有操作
+   *
+   * @param depth
+   */
+  protected abstract void operation(int depth);
 }

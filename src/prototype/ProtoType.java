@@ -10,8 +10,6 @@
 package prototype;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 /**
@@ -23,11 +21,11 @@ import lombok.ToString;
 @ToString
 public class ProtoType implements Cloneable {
 
-    private String name;
-    private String code;
+  private String name;
+  private String code;
 
-    @Override
-    protected ProtoType clone() throws CloneNotSupportedException {
-        return (ProtoType) super.clone();
-    }
+  @Override
+  protected ProtoType clone() throws CloneNotSupportedException {
+    return (ProtoType) super.clone();
+  }
 }

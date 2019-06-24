@@ -15,18 +15,18 @@ package adapter.dft;
  * @author changhao
  */
 public interface Live {
-    /**
-     * 吃饭
-     */
-    void eat();
+  /**
+   * 吃饭
+   */
+  void eat();
 
-    /**
-     * 睡觉
-     */
-    void sleep();
+  /**
+   * 睡觉
+   */
+  void sleep();
 
-    /**
-     * 跑步
-     */
-    void run();
+  /**
+   * 跑步
+   */
+  void run();
 }

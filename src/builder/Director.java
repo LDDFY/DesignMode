@@ -16,12 +16,12 @@ package builder;
  */
 public class Director {
 
-    public Plane construct(Builder builder) {
-        System.out.println("指导者开始组装飞机部件...\n\t");
-        builder.buildeEngine();
-        builder.buildeWheel();
-        builder.buildeStructure();
-        System.out.println("指导者组装完成...\n\t");
-        return builder.builde();
-    }
+  public Plane construct(Builder builder) {
+    System.out.println("指导者开始组装飞机部件...\n\t");
+    builder.buildeEngine();
+    builder.buildeWheel();
+    builder.buildeStructure();
+    System.out.println("指导者组装完成...\n\t");
+    return builder.builde();
+  }
 }

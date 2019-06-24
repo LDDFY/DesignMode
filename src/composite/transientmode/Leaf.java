@@ -9,9 +9,9 @@
  */
 package composite.transientmode;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 叶子节点
@@ -20,31 +20,30 @@ import java.util.List;
  */
 public class Leaf extends Component {
 
-    public Leaf(String name) {
-        super(name);
-    }
+  public Leaf(String name) {
+    super(name);
+  }
 
+  @Override
+  @Deprecated
+  protected void add(Component component) {
+    throw new UnsupportedOperationException("叶子节点不支持添加子节点...\t\n");
+  }
 
-    @Override
-    @Deprecated
-    protected void add(Component component) {
-        throw new UnsupportedOperationException("叶子节点不支持添加子节点...\t\n");
-    }
+  @Override
+  @Deprecated
+  protected void remove(Component component) {
+    throw new UnsupportedOperationException("叶子节点不支持删除子节点...\t\n");
+  }
 
-    @Override
-    @Deprecated
-    protected void remove(Component component) {
-        throw new UnsupportedOperationException("叶子节点不支持删除子节点...\t\n");
-    }
+  @Override
+  protected void operation(int depth) {
+    System.out.println(StringUtils.repeat(SPLIT, depth).concat(this.name));
+  }
 
-    @Override
-    protected void operation(int depth) {
-        System.out.println(StringUtils.repeat(SPLIT, depth).concat(this.name));
-    }
-
-    @Override
-    @Deprecated
-    protected List<Component> getChildren() {
-        throw new UnsupportedOperationException("叶子节点不存在子节点信息...\t\n");
-    }
+  @Override
+  @Deprecated
+  protected List<Component> getChildren() {
+    throw new UnsupportedOperationException("叶子节点不存在子节点信息...\t\n");
+  }
 }

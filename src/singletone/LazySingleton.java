@@ -15,23 +15,23 @@ package singletone;
  * @author changhao
  */
 public class LazySingleton {
-    public static LazySingleton instance = null;
+  public static LazySingleton instance = null;
 
-    private LazySingleton() {
-        //预防反射造成单例造成破坏
-        if (instance != null) {
-            throw new RuntimeException("不可使用构造方法实例化单例！");
-        }
+  private LazySingleton() {
+    // 预防反射造成单例造成破坏
+    if (instance != null) {
+      throw new RuntimeException("不可使用构造方法实例化单例！");
     }
+  }
 
-    public static LazySingleton getInstance() {
-        if (null == instance) {
-            instance = new LazySingleton();
-        }
-        return instance;
+  public static LazySingleton getInstance() {
+    if (null == instance) {
+      instance = new LazySingleton();
     }
+    return instance;
+  }
 
-    public void doSomething() {
-        System.out.println("懒汉式 doSomething ...");
-    }
+  public void doSomething() {
+    System.out.println("懒汉式 doSomething ...");
+  }
 }

@@ -15,8 +15,8 @@ package factory.methodfactory;
  * @author changhao
  */
 public interface Product {
-    /**
-     * 产品描述
-     */
-    void display();
+  /**
+   * 产品描述
+   */
+  void display();
 }

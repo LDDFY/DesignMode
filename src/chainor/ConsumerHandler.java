@@ -1,9 +1,9 @@
 package chainor;
 
+import java.math.BigDecimal;
+
 import lombok.Getter;
 import lombok.Setter;
-
-import java.math.BigDecimal;
 
 /**
  * 抽象处理者角色
@@ -12,15 +12,17 @@ import java.math.BigDecimal;
  */
 public abstract class ConsumerHandler {
 
-    @Getter
-    @Setter
-    private ConsumerHandler nextHandler;
+  @Getter
+  @Setter
+  public ConsumerHandler nextHandler;
 
-    /**
-     * 请求处理
-     *
-     * @param user 用户
-     * @param free 折扣
-     */
-    abstract void doHandler(String user, BigDecimal free);
+  /**
+   * 请求处理
+   *
+   * @param user
+   *          用户
+   * @param free
+   *          折扣
+   */
+  abstract void doHandler(String user, BigDecimal free);
 }

@@ -16,11 +16,11 @@ package bridge;
  */
 public abstract class Road {
 
-    protected Vehicle vehicle;
+  protected Vehicle vehicle;
 
-    public Road(Vehicle vehicle) {
-        this.vehicle = vehicle;
-    }
+  public Road(Vehicle vehicle) {
+    this.vehicle = vehicle;
+  }
 
-    abstract void driveOnRoad();
+  abstract void driveOnRoad();
 }

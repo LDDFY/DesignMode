@@ -16,33 +16,33 @@ package composite.safemode;
  */
 public class SafeModeTest {
 
-    public static void main(String[] args) {
-        Composite root = new Composite("树根");
+  public static void main(String[] args) {
+    Composite root = new Composite("树根");
 
-        Composite branch01 = new Composite("树枝01");
-        Composite branch02 = new Composite("树枝02");
-        Composite branch03 = new Composite("树枝03");
-        Composite branch04 = new Composite("树枝04");
+    Composite branch01 = new Composite("树枝01");
+    Composite branch02 = new Composite("树枝02");
+    Composite branch03 = new Composite("树枝03");
+    Composite branch04 = new Composite("树枝04");
 
-        branch01.add(new Leaf("树叶01"));
-        branch01.add(new Leaf("树叶02"));
+    branch01.add(new Leaf("树叶01"));
+    branch01.add(new Leaf("树叶02"));
 
-        branch03.add(new Leaf("树叶03"));
-        branch03.add(new Leaf("树叶04"));
-        branch03.add(new Leaf("树叶05"));
-        branch01.add(branch03);
+    branch03.add(new Leaf("树叶03"));
+    branch03.add(new Leaf("树叶04"));
+    branch03.add(new Leaf("树叶05"));
+    branch01.add(branch03);
 
-        branch02.add(new Leaf("树叶06"));
-        branch02.add(new Leaf("树叶07"));
-        branch02.add(new Leaf("树叶08"));
+    branch02.add(new Leaf("树叶06"));
+    branch02.add(new Leaf("树叶07"));
+    branch02.add(new Leaf("树叶08"));
 
-        branch04.add(new Leaf("树叶09"));
-        branch04.add(new Leaf("树叶10"));
-        branch02.add(branch04);
+    branch04.add(new Leaf("树叶09"));
+    branch04.add(new Leaf("树叶10"));
+    branch02.add(branch04);
 
-        root.add(branch01);
-        root.add(branch02);
+    root.add(branch01);
+    root.add(branch02);
 
-        root.operation(0);
-    }
+    root.operation(0);
+  }
 }

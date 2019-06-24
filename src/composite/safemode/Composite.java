@@ -9,10 +9,10 @@
  */
 package composite.safemode;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.LinkedList;
 import java.util.List;
+
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * 安全模式树枝
@@ -20,34 +20,34 @@ import java.util.List;
  * @author changhao
  */
 public class Composite extends Component {
-    /**
-     * 子树枝/叶子信息
-     */
-    private LinkedList<Component> children;
+  /**
+   * 子树枝/叶子信息
+   */
+  private LinkedList<Component> children;
 
-    public Composite(String name) {
-        super(name);
-        this.children = new LinkedList<>();
-    }
+  public Composite(String name) {
+    super(name);
+    this.children = new LinkedList<>();
+  }
 
-    protected void add(Component component) {
-        this.children.add(component);
-    }
+  protected void add(Component component) {
+    this.children.add(component);
+  }
 
-    protected void remove(composite.transientmode.Component component) {
-        this.children.remove(component);
-    }
+  protected void remove(composite.transientmode.Component component) {
+    this.children.remove(component);
+  }
 
-    @Override
-    protected void operation(int depth) {
-        System.out.println(StringUtils.repeat(SPLIT, depth).concat(this.name));
-        int childDepth = depth + 1;
-        for (Component c : this.getChildren()) {
-            c.operation(childDepth);
-        }
+  @Override
+  protected void operation(int depth) {
+    System.out.println(StringUtils.repeat(SPLIT, depth).concat(this.name));
+    int childDepth = depth + 1;
+    for (Component c : this.getChildren()) {
+      c.operation(childDepth);
     }
+  }
 
-    protected List<Component> getChildren() {
-        return this.children;
-    }
+  protected List<Component> getChildren() {
+    return this.children;
+  }
 }

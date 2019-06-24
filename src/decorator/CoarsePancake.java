@@ -17,12 +17,12 @@ import java.math.BigDecimal;
  * @author changhao
  */
 public class CoarsePancake extends Pancake {
-    public CoarsePancake() {
-        this.name = "杂粮煎饼";
-    }
+  public CoarsePancake() {
+    this.name = "杂粮煎饼";
+  }
 
-    @Override
-    public BigDecimal getPrice() {
-        return BigDecimal.valueOf(5.0);
-    }
+  @Override
+  public BigDecimal getPrice() {
+    return BigDecimal.valueOf(5.0);
+  }
 }

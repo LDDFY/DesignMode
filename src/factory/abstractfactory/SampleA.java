@@ -6,8 +6,8 @@ package factory.abstractfactory;
  * @author changhao
  */
 public interface SampleA {
-    /**
-     * 说话
-     */
-    void say();
+  /**
+   * 说话
+   */
+  void say();
 }

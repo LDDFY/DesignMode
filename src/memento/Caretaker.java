@@ -18,5 +18,5 @@ import lombok.Data;
  */
 @Data
 public class Caretaker {
-    private Memento memento;
+  private Memento memento;
 }

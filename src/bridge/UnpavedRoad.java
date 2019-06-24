@@ -16,13 +16,13 @@ package bridge;
  */
 public class UnpavedRoad extends Road {
 
-    public UnpavedRoad(Vehicle vehicle) {
-        super(vehicle);
-    }
+  public UnpavedRoad(Vehicle vehicle) {
+    super(vehicle);
+  }
 
-    @Override
-    void driveOnRoad() {
-        vehicle.drive();
-        System.out.println("行驶在柏油路...\n\t");
-    }
+  @Override
+  void driveOnRoad() {
+    vehicle.drive();
+    System.out.println("行驶在柏油路...\n\t");
+  }
 }

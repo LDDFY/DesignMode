@@ -16,25 +16,25 @@ package singletone;
  */
 public class PlaceholderSingleton {
 
-    private static boolean flag = false;
+  private static boolean flag = false;
 
-    private PlaceholderSingleton() {
-        if (!flag) {
-            flag = !flag;
-        } else {
-            throw new RuntimeException("不可使用构造方法实例化单例！");
-        }
+  private PlaceholderSingleton() {
+    if (!flag) {
+      flag = !flag;
+    } else {
+      throw new RuntimeException("不可使用构造方法实例化单例！");
     }
+  }
 
-    private static class SingletonHolder {
-        private static PlaceholderSingleton instance = new PlaceholderSingleton();
-    }
+  public static PlaceholderSingleton getInstance() {
+    return SingletonHolder.instance;
+  }
 
-    public static PlaceholderSingleton getInstance() {
-        return SingletonHolder.instance;
-    }
+  public void doSomething() {
+    System.out.println("占位符式(内部类) doSomething ...");
+  }
 
-    public void doSomething() {
-        System.out.println("占位符式(内部类) doSomething ...");
-    }
+  private static class SingletonHolder {
+    private static PlaceholderSingleton instance = new PlaceholderSingleton();
+  }
 }

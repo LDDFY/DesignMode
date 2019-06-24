@@ -18,16 +18,16 @@ import adapter.Target;
  * @author changhao
  */
 public class ObjectAdapter implements Target {
-    private Adaptee adaptee;
+  private Adaptee adaptee;
 
-    public ObjectAdapter(Adaptee adaptee) {
-        this.adaptee = adaptee;
-    }
+  public ObjectAdapter(Adaptee adaptee) {
+    this.adaptee = adaptee;
+  }
 
-    @Override
-    public void request() {
-        System.out.println("对象适配器开始适配...\t\n");
-        this.adaptee.specificRequest();
-        System.out.println("对象适配器适配结束...\t\n");
-    }
+  @Override
+  public void request() {
+    System.out.println("对象适配器开始适配...\t\n");
+    this.adaptee.specificRequest();
+    System.out.println("对象适配器适配结束...\t\n");
+  }
 }

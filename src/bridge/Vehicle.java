@@ -16,8 +16,8 @@ package bridge;
  */
 public interface Vehicle {
 
-    /**
-     * 开
-     */
-    void drive();
+  /**
+   * 开
+   */
+  void drive();
 }

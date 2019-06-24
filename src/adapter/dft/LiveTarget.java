@@ -13,8 +13,8 @@ package adapter.dft;
  * @author changhao
  */
 public class LiveTarget extends LiveDefault {
-    @Override
-    public void eat() {
-        System.out.println("liveTarget eat...\t\n");
-    }
+  @Override
+  public void eat() {
+    System.out.println("liveTarget eat...\t\n");
+  }
 }

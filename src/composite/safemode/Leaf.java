@@ -12,18 +12,17 @@ package composite.safemode;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Leaf：叶子
- * 相对于透明模式来讲叶子节点的remove、add、以及getChildren方法不在继承的组件之中。
+ * Leaf：叶子 相对于透明模式来讲叶子节点的remove、add、以及getChildren方法不在继承的组件之中。
  *
  * @author changhao
  */
 public class Leaf extends Component {
-    public Leaf(String name) {
-        super(name);
-    }
+  public Leaf(String name) {
+    super(name);
+  }
 
-    @Override
-    protected void operation(int depth) {
-        System.out.println(StringUtils.repeat(SPLIT, depth).concat(this.name));
-    }
+  @Override
+  protected void operation(int depth) {
+    System.out.println(StringUtils.repeat(SPLIT, depth).concat(this.name));
+  }
 }

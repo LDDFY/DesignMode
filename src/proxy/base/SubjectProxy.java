@@ -16,16 +16,16 @@ package proxy.base;
  */
 public class SubjectProxy implements Subject {
 
-    private Subject subject;
+  private Subject subject;
 
-    public SubjectProxy(Subject subject) {
-        this.subject = subject;
-    }
+  public SubjectProxy(Subject subject) {
+    this.subject = subject;
+  }
 
-    @Override
-    public void doSomething() {
-        System.out.println("SubjectProxy 执行 doSomething 方法...\t\n");
-        subject.doSomething();
-        System.out.println("SubjectProxy 执行完毕...\t\n");
-    }
+  @Override
+  public void doSomething() {
+    System.out.println("SubjectProxy 执行 doSomething 方法...\t\n");
+    subject.doSomething();
+    System.out.println("SubjectProxy 执行完毕...\t\n");
+  }
 }

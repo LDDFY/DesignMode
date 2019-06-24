@@ -9,10 +9,10 @@
  */
 package proxy.cglib;
 
+import java.lang.reflect.Method;
+
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-
-import java.lang.reflect.Method;
 
 /**
  * Cglib 代理方法拦截器
@@ -20,11 +20,12 @@ import java.lang.reflect.Method;
  * @author changhao
  */
 public class SubjectMethodInterceptor implements MethodInterceptor {
-    @Override
-    public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
-        System.out.println("SubjectMethodInterceptor 执行方法：" + method.getName() + "...\t\n");
-        proxy.invokeSuper(obj, args);
-        System.out.println("SubjectMethodInterceptor 执行方法：" + method.getName() + "完毕...\t\n");
-        return null;
-    }
+  @Override
+  public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy)
+      throws Throwable {
+    System.out.println("SubjectMethodInterceptor 执行方法：" + method.getName() + "...\t\n");
+    proxy.invokeSuper(obj, args);
+    System.out.println("SubjectMethodInterceptor 执行方法：" + method.getName() + "完毕...\t\n");
+    return null;
+  }
 }

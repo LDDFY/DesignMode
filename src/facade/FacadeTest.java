@@ -7,8 +7,8 @@ package facade;
  */
 public class FacadeTest {
 
-    public static void main(String[] args) {
-        FacadeHead facadeHead = new FacadeHead();
-        facadeHead.explainWords("你在干吗？");
-    }
+  public static void main(String[] args) {
+    FacadeHead facadeHead = new FacadeHead();
+    facadeHead.explainWords("你在干吗？");
+  }
 }

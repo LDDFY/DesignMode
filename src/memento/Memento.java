@@ -18,12 +18,12 @@ import lombok.Data;
  */
 @Data
 public class Memento {
-    /**
-     * 血条
-     */
-    private int bloodValue;
-    /**
-     * 蓝条
-     */
-    private int magicValue;
+  /**
+   * 血条
+   */
+  private int bloodValue;
+  /**
+   * 蓝条
+   */
+  private int magicValue;
 }
