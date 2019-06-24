@@ -9,14 +9,28 @@
  */
 package interpreter;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 解释器模式测试类
- * 
+ *
  * @author changhao
  */
+@Slf4j
 public class InterpreterTest {
 
   public static void main(String[] args) {
+    // (a*b)/(a-b+3)
+    Context context = new Context();
+    Variable a = new Variable();
+    Variable b = new Variable();
+    Constant c = new Constant(3);
 
+    context.addValue(a, 12);
+    context.addValue(b, 3);
+
+    Expression expression = new Divl(new Mul(a, b), new Add(new Sub(a, b), c));
+
+    log.info("Result:{}", expression.interpret(context));
   }
 }

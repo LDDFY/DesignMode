@@ -10,6 +10,7 @@
 #idea profile
 .idea/
 out/
+*.iml
 
 # BlueJ files
 *.ctxt
