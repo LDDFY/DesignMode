@@ -19,8 +19,9 @@ import java.util.List;
 public class VisitorTest {
   public static void main(String[] args) {
     List<Element> list = ObjectStructure.getList();
+    Visitor visitor = new Visitor();
     for (Element e : list) {
-      e.accept(new Visitor());
+      e.accept(visitor);
     }
   }
 }
