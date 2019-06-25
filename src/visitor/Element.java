@@ -19,9 +19,9 @@ public abstract class Element {
   /**
    * 接收访问者
    * 
-   * @param vistor
+   * @param visitor
    */
-  public abstract void accept(IVistor vistor);
+  public abstract void accept(IVistor visitor);
 
   /**
    *操作
