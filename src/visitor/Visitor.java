@@ -14,7 +14,7 @@ package visitor;
  * 
  * @author changhao
  */
-public class Visitor implements IVistor {
+public class Visitor implements IVisitor {
   @Override
   public void visit(ConcreteElement1 e1) {
     e1.doSomething();
