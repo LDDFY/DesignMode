@@ -21,7 +21,7 @@ import command.Command;
  */
 public class MacroAudioCommand implements MacroCommand {
 
-  private List<Command> commandList = new ArrayList();
+  private final List<Command> commandList = new ArrayList<>();
 
   @Override
   public void add(Command command) {

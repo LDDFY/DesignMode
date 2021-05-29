@@ -9,6 +9,8 @@
  */
 package composite.safemode;
 
+import org.apache.commons.lang3.StringUtils;
+
 /**
  * 安全模式：
  * <p>
@@ -17,18 +19,24 @@ package composite.safemode;
  * @author changhao
  */
 public abstract class Component {
-  public static final String SPLIT = "-->";
 
-  protected String name;
+	public static final String SPLIT = "-->";
 
-  public Component(String name) {
-    this.name = name;
-  }
+	protected String name;
 
-  /**
-   * 共有操作
-   *
-   * @param depth
-   */
-  protected abstract void operation(int depth);
+	public Component(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * 共有操作
+	 *
+	 * @param depth
+	 */
+	protected abstract void operation(int depth);
+
+	protected void printSplit(int repeat) {
+		System.out.print(StringUtils.repeat(SPLIT, repeat));
+		System.out.println(this.name);
+	}
 }

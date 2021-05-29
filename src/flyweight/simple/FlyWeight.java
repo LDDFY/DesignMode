@@ -10,16 +10,15 @@
 package flyweight.simple;
 
 /**
- * 享元角色：FlyWeight
+ * 抽象享元角色：FlyWeight
  *
  * @author changhao
  */
 public interface FlyWeight {
-  /**
-   * 操作
-   * 
-   * @param state
-   *          外部状态
-   */
-  void operation(String state);
+	/**
+	 * 操作
+	 *
+	 * @param state 外部状态
+	 */
+	void operation(String state);
 }

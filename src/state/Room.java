@@ -13,42 +13,42 @@ import lombok.Data;
 
 /**
  * 房间：环境角色Context
- * 
+ *
  * @author changhao
  */
 @Data
 public class Room {
-  private State freeTimeState;
-  private State checkInState;
-  private State bookedState;
 
-  private State state;
+	private State state;
+	private State freeTimeState;
+	private State checkInState;
+	private State bookedState;
 
-  public Room() {
-    this.freeTimeState = new FreeTimeState(this);
-    this.checkInState = new CheckInState(this);
-    this.bookedState = new BookedState(this);
-    this.state = this.freeTimeState;
-  }
+	public Room() {
+		this.freeTimeState = new FreeTimeState(this);
+		this.checkInState = new CheckInState(this);
+		this.bookedState = new BookedState(this);
+		this.state = this.freeTimeState;
+	}
 
-  public void bookRoom() {
-    state.bookRoom();
-  }
+	public void bookRoom() {
+		state.bookRoom();
+	}
 
-  public void unsubscribeRoom() {
-    state.unsubscribeRoom();
-  }
+	public void unsubscribeRoom() {
+		state.unsubscribeRoom();
+	}
 
-  public void checkInRoom() {
-    state.checkInRoom();
-  }
+	public void checkInRoom() {
+		state.checkInRoom();
+	}
 
-  public void checkOutRoom() {
-    state.checkOutRoom();
-  }
+	public void checkOutRoom() {
+		state.checkOutRoom();
+	}
 
-  @Override
-  public String toString() {
-    return "该房间的状态是:" + getState().getClass().getName();
-  }
+	@Override
+	public String toString() {
+		return "该房间的状态是:" + getState().getClass().getName();
+	}
 }

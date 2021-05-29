@@ -9,6 +9,8 @@
  */
 package composite.transientmode;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.List;
 
 /**
@@ -20,42 +22,48 @@ import java.util.List;
  */
 public abstract class Component {
 
-  public static final String SPLIT = "-->";
-  /**
-   * 名称
-   */
-  protected String name;
+	public static final String SPLIT = "->";
 
-  public Component(String name) {
-    this.name = name;
+	/**
+	 * 名称
+	 */
+	protected String name;
+
+	public Component(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * 新建
+	 *
+	 * @param component 节点
+	 */
+	protected abstract void add(Component component);
+
+	/**
+	 * 删除
+	 *
+	 * @param component 节点
+	 */
+	protected abstract void remove(Component component);
+
+	/**
+	 * 操作
+	 *
+	 * @param depth 节点深度
+	 */
+	protected abstract void operation(int depth);
+
+	/**
+	 * 获取子类
+	 *
+	 * @return 节点列表
+	 */
+	protected abstract List<Component> getChildren();
+
+
+  protected void printSplit(int repeat) {
+    System.out.print(StringUtils.repeat(SPLIT, repeat));
+    System.out.println(this.name);
   }
-
-  /**
-   * 新建
-   *
-   * @param component
-   */
-  protected abstract void add(Component component);
-
-  /**
-   * 删除
-   *
-   * @param component
-   */
-  protected abstract void remove(Component component);
-
-  /**
-   * 操作
-   *
-   * @param depth
-   *          节点深度
-   */
-  protected abstract void operation(int depth);
-
-  /**
-   * 获取子类
-   *
-   * @return
-   */
-  protected abstract List<Component> getChildren();
 }

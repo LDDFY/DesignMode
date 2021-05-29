@@ -10,16 +10,24 @@
 package decorator;
 
 /**
- * 装饰角色，所有装饰类的顶级类
+ * 抽象装饰角色，所有装饰类的顶级类
  *
  * @author changhao
  */
 public abstract class Condiment extends Pancake {
 
-  @Override
-  public abstract String getName();
+	/**
+	 * 获取名称
+	 *
+	 * @return 名称
+	 */
+	@Override
+	public abstract String getName();
 
-  public void sold() {
-    System.out.println(getName() + ":" + getPrice());
-  }
+	/**
+	 * 扩展方法
+	 */
+	public void sold() {
+		System.out.println(getName() + ":" + getPrice());
+	}
 }

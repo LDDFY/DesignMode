@@ -15,6 +15,7 @@ package builder;
  * @author changhao
  */
 public class BuilderTest {
+
   public static void main(String[] args) {
     Director director = new Director();
     Plane product = director.construct(new ConcreteBuilder());

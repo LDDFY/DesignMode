@@ -19,6 +19,7 @@ import command.base.StopCommand;
  * @author changhao
  */
 public class MacroCommandTest {
+
   public static void main(String[] args) {
     // 接收者角色（Receiver）
     AudioPlayer audioPlayer = new AudioPlayer();
@@ -33,6 +34,7 @@ public class MacroCommandTest {
     macroCommand.add(playCommand);
     macroCommand.add(rewindCommand);
     macroCommand.add(stopCommand);
+
     // 执行
     macroCommand.execute();
   }

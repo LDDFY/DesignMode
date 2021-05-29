@@ -11,16 +11,14 @@ package observer.pull;
 
 /**
  * 拉模式具体观察者：ConcreteObserver
- * 
+ *
  * @author changhao
  */
 public class ConcreteObserver implements Observer {
-  private String msg;
 
-  @Override
-  public void update(Subject subject) {
-    ConcreteSubject concreteSubject = (ConcreteSubject) subject;
-    this.msg = concreteSubject.getMsg();
-    System.out.println("观察者收到信息为：" + this.msg);
-  }
+	@Override
+	public void update(Subject subject) {
+		ConcreteSubject concreteSubject = (ConcreteSubject) subject;
+		System.out.println("观察者收到信息为：" + concreteSubject.getMsg());
+	}
 }

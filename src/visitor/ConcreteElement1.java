@@ -18,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class ConcreteElement1 extends Element {
+
   @Override
   public void accept(IVisitor visitor) {
     visitor.visit(this);

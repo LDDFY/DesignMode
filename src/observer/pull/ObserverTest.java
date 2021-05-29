@@ -15,6 +15,7 @@ package observer.pull;
  * @author changhao
  */
 public class ObserverTest {
+
   public static void main(String[] args) {
     Observer observer = new ConcreteObserver();
     ConcreteSubject subject = new ConcreteSubject("Topic");

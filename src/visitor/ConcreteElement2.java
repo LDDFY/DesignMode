@@ -13,18 +13,19 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * 具体元素角色:Concrete Element
- * 
+ *
  * @author changhao
  */
 @Slf4j
 public class ConcreteElement2 extends Element {
-  @Override
-  public void accept(IVisitor visitor) {
-    visitor.visit(this);
-  }
 
-  @Override
-  public void doSomething() {
-    log.info("Element2");
-  }
+	@Override
+	public void accept(IVisitor visitor) {
+		visitor.visit(this);
+	}
+
+	@Override
+	public void doSomething() {
+		log.info("Element2");
+	}
 }

@@ -31,8 +31,8 @@ public class TestAdapter {
    * 对象适配器
    */
   public static void objectAdapterTest() {
-    Adaptee adaptee = new Adaptee();
-    Target adapter = new ObjectAdapter(adaptee);
+    Adaptor adaptor = new Adaptor();
+    Target adapter = new ObjectAdapter(adaptor);
     adapter.request();
   }
 

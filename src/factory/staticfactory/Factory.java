@@ -6,11 +6,12 @@ package factory.staticfactory;
  * @author changhao
  */
 public class Factory {
+
   private static boolean flag = false;
 
   private Factory() {
     if (!flag) {
-      flag = !flag;
+      flag = true;
     } else {
       throw new RuntimeException("cannot reInstance ProductAFactory!");
     }

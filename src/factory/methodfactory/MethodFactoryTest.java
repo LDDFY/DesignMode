@@ -6,14 +6,14 @@ package factory.methodfactory;
  * @author changhao
  */
 public class MethodFactoryTest {
-  public static void main(String[] args) {
-    ProductBFactory productBFactory = new ProductBFactory();
-    ProductAFactory productAFactory = new ProductAFactory();
+	public static void main(String[] args) {
+    ProductAFactory factoryA = new ProductAFactory();
+    ProductBFactory factoryB = new ProductBFactory();
 
-    Product productA = productAFactory.create();
-    Product productB = productBFactory.create();
+		Product productA = factoryA.create();
+		Product productB = factoryB.create();
 
-    productA.display();
-    productB.display();
-  }
+		productA.display();
+		productB.display();
+	}
 }

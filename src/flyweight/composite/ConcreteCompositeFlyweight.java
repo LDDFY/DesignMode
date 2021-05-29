@@ -9,28 +9,28 @@
  */
 package flyweight.composite;
 
+import flyweight.simple.FlyWeight;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import flyweight.simple.FlyWeight;
-
 /**
- * 符合享元角色
- * 
+ * 组合享元角色
+ *
  * @author changhao
  */
 public class ConcreteCompositeFlyweight implements FlyWeight {
 
-  private Map<String, FlyWeight> flyWeights = new HashMap<>();
+	private final Map<String, FlyWeight> FLY_WEIGHTS = new HashMap<>();
 
-  @Override
-  public void operation(String state) {
-    for (String s : flyWeights.keySet()) {
-      flyWeights.get(s).operation(state);
-    }
-  }
+	@Override
+	public void operation(String state) {
+		for (String s : FLY_WEIGHTS.keySet()) {
+			FLY_WEIGHTS.get(s).operation(state);
+		}
+	}
 
-  public void add(String key, FlyWeight fly) {
-    flyWeights.put(key, fly);
-  }
+	public void add(String key, FlyWeight fly) {
+		FLY_WEIGHTS.put(key, fly);
+	}
 }

@@ -10,13 +10,14 @@
 package proxy.base;
 
 /**
- * 被代理实现类
+ * 被代理实现类 （真实角色）
  *
  * @author changhao
  */
 public class RealSubject implements Subject {
-  @Override
-  public void doSomething() {
-    System.out.println("RealSubject do something...\t\n");
-  }
+
+	@Override
+	public void doSomething() {
+		System.out.println("RealSubject do something...");
+	}
 }

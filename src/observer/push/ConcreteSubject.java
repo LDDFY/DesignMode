@@ -15,6 +15,7 @@ package observer.push;
  * @author changhao
  */
 public class ConcreteSubject extends Subject {
+
   private String msg;
 
   public ConcreteSubject(String msg) {

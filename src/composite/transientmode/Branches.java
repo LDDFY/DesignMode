@@ -7,31 +7,34 @@
  * 修改历史：
  *  2019年-05月-16日  - changhao - 创建。
  */
-package composite.safemode;
+package composite.transientmode;
 
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 安全模式树枝
+ * 树枝 Branches,树枝可添加树枝和树叶
  *
  * @author changhao
  */
-public class Composite extends Component {
+public class Branches extends Component {
+
 	/**
 	 * 子树枝/叶子信息
 	 */
 	private final LinkedList<Component> children;
 
-	public Composite(String name) {
+	public Branches(String name) {
 		super(name);
 		this.children = new LinkedList<>();
 	}
 
+	@Override
 	protected void add(Component component) {
 		this.children.add(component);
 	}
 
+	@Override
 	protected void remove(Component component) {
 		this.children.remove(component);
 	}
@@ -45,6 +48,7 @@ public class Composite extends Component {
 		}
 	}
 
+	@Override
 	protected List<Component> getChildren() {
 		return this.children;
 	}

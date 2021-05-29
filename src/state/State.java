@@ -11,28 +11,28 @@ package state;
 
 /**
  * 状态接口：State
- * 
+ *
  * @author changhao
  */
 public interface State {
 
-  /**
-   * 预定
-   */
-  public void bookRoom();
+	/**
+	 * 预定
+	 */
+	void bookRoom();
 
-  /**
-   * 退订
-   */
-  public void unsubscribeRoom();
+	/**
+	 * 退订
+	 */
+	void unsubscribeRoom();
 
-  /**
-   * 入住
-   */
-  public void checkInRoom();
+	/**
+	 * 入住
+	 */
+	void checkInRoom();
 
-  /**
-   * 查看
-   */
-  public void checkOutRoom();
+	/**
+	 * 查看
+	 */
+	void checkOutRoom();
 }

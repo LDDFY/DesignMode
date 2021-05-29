@@ -15,13 +15,14 @@ package composite.transientmode;
  * @author changhao
  */
 public class TransientModeTest {
-  public static void main(String[] args) {
-    Composite root = new Composite("树根");
 
-    Composite branch01 = new Composite("树枝01");
-    Composite branch02 = new Composite("树枝02");
-    Composite branch03 = new Composite("树枝03");
-    Composite branch04 = new Composite("树枝04");
+  public static void main(String[] args) {
+    Branches root = new Branches("树根");
+
+    Branches branch01 = new Branches("树枝01");
+    Branches branch02 = new Branches("树枝02");
+    Branches branch03 = new Branches("树枝03");
+    Branches branch04 = new Branches("树枝04");
 
     branch01.add(new Leaf("树叶01"));
     branch01.add(new Leaf("树叶02"));

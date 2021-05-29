@@ -1,6 +1,7 @@
 package composite.demo1;
 
 public class TestComposite {
+
   public static void main(String[] args) {
     Chassis chassis = new Chassis("PC chassis");
     chassis.add(new Disk("10G DISK"));

@@ -19,7 +19,7 @@ import java.util.List;
  */
 public abstract class Subject {
 
-  private List<Observer> list = new ArrayList<>();
+  private final List<Observer> list = new ArrayList<>();
 
   public void attach(Observer observer) {
     list.add(observer);

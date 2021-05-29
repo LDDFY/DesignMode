@@ -17,10 +17,12 @@ package bridge;
  * @author changhao
  */
 public class VehicleTest {
-  public static void main(String[] args) {
-    Road road = new CementRoad(new Car());
-    road.driveOnRoad();
-    road = new UnpavedRoad(new Bus());
-    road.driveOnRoad();
-  }
+
+	public static void main(String[] args) {
+		//NOTE 路和车是两个抽象的变化，分别抽象化这两个变化的条件，在 Road（抽象化修正角色中）进行行修正。
+		Road road = new CementRoad(new Car());
+		road.driveOnRoad();
+		road = new UnpavedRoad(new Bus());
+		road.driveOnRoad();
+	}
 }

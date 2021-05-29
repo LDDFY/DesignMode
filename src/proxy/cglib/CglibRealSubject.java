@@ -22,6 +22,6 @@ public class CglibRealSubject extends RealSubject {
    * 用于检验Cglib是通过类继承方式实现代理的
    */
   public void doAnotherThing() {
-    System.out.println("CglibRealSubject do anotherThing...\t\n");
+    System.out.println("CglibRealSubject do anotherThing...");
   }
 }

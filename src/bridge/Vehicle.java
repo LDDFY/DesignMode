@@ -20,4 +20,5 @@ public interface Vehicle {
    * 开
    */
   void drive();
+
 }

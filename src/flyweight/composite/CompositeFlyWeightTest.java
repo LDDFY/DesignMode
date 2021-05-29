@@ -20,8 +20,9 @@ import flyweight.simple.FlyWeight;
  * @author changhao
  */
 public class CompositeFlyWeightTest {
+  
   public static void main(String[] args) {
-    List<String> list = new ArrayList<String>();
+    List<String> list = new ArrayList<>();
     list.add("a");
     list.add("b");
     list.add("c");

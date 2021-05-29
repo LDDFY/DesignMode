@@ -15,10 +15,10 @@ package observer.push;
  * @author changhao
  */
 public class ObserverTest {
+
   public static void main(String[] args) {
     Observer observer = new ConcreteObserver();
     ConcreteSubject subject = new ConcreteSubject("测试消息");
-
     subject.attach(observer);
     subject.publish("更新测试消息");
   }

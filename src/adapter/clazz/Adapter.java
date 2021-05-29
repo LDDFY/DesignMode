@@ -9,7 +9,7 @@
  */
 package adapter.clazz;
 
-import adapter.Adaptee;
+import adapter.Adaptor;
 import adapter.Target;
 
 /**
@@ -17,11 +17,12 @@ import adapter.Target;
  *
  * @author changhao
  */
-public class Adapter extends Adaptee implements Target {
-  @Override
-  public void request() {
-    System.out.println("类适配器进行适配...\t\n");
-    specificRequest();
-    System.out.println("类适配器适配结束...\t\n");
-  }
+public class Adapter extends Adaptor implements Target {
+
+	@Override
+	public void request() {
+		System.out.println("类适配器进行适配...\t\n");
+		specificRequest();
+		System.out.println("类适配器适配结束...\t\n");
+	}
 }

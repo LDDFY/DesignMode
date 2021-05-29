@@ -10,7 +10,7 @@
 package proxy.base;
 
 /**
- * 代理顶级类
+ * 代理顶级类 （抽象角色）
  *
  * @author changhao
  */

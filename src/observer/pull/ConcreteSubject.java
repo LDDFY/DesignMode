@@ -15,6 +15,7 @@ package observer.pull;
  * @author changhao
  */
 public class ConcreteSubject extends Subject {
+
   private String msg;
 
   public ConcreteSubject(String msg) {

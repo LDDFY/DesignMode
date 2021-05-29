@@ -18,14 +18,14 @@ import command.Command;
  */
 public class PlayCommand implements Command {
 
-  private AudioPlayer player;
+	private final AudioPlayer player;
 
-  public PlayCommand(AudioPlayer player) {
-    this.player = player;
-  }
+	public PlayCommand(AudioPlayer player) {
+		this.player = player;
+	}
 
-  @Override
-  public void execute() {
-    player.play();
-  }
+	@Override
+	public void execute() {
+		player.play();
+	}
 }

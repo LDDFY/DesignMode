@@ -14,23 +14,24 @@ import java.util.List;
 
 /**
  * 拉模式抽象主题：subject
- * 
+ *
  * @author changhao
  */
 public abstract class Subject {
-  private List<Observer> list = new ArrayList<>();
 
-  public void attach(Observer observer) {
-    list.add(observer);
-  }
+	private final List<Observer> list = new ArrayList<>();
 
-  public void detach(Observer observer) {
-    list.remove(observer);
-  }
+	public void attach(Observer observer) {
+		list.add(observer);
+	}
 
-  public void notifyAllObservers() {
-    for (Observer observer : list) {
-      observer.update(this);
-    }
-  }
+	public void detach(Observer observer) {
+		list.remove(observer);
+	}
+
+	public void notifyAllObservers() {
+		for (Observer observer : list) {
+			observer.update(this);
+		}
+	}
 }

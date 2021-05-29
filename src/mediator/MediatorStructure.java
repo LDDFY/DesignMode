@@ -20,15 +20,16 @@ import lombok.Setter;
 @Getter
 @Setter
 public class MediatorStructure implements Mediator {
-  private HouseOwner houseOwner;
-  private Tenant tenant;
 
-  @Override
-  public void contact(String message, Person person) {
-    if (person == houseOwner) {
-      tenant.getMessage(message);
-    } else {
-      houseOwner.getMessage(message);
-    }
-  }
+	private Tenant tenant;
+	private HouseOwner houseOwner;
+
+	@Override
+	public void contact(String message, Person person) {
+		if (person == houseOwner) {
+			tenant.getMessage(message);
+		} else {
+			houseOwner.getMessage(message);
+		}
+	}
 }

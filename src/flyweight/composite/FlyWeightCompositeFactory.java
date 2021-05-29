@@ -9,36 +9,31 @@
  */
 package flyweight.composite;
 
+import flyweight.simple.ConcreteFlyWeight;
+import flyweight.simple.FlyWeight;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import flyweight.simple.ConcreteFlyWeight;
-import flyweight.simple.FlyWeight;
-
 /**
  * 组合享元模式工厂类
- * 
+ *
  * @author changhao
  */
 public class FlyWeightCompositeFactory {
 
-  private static Map<String, FlyWeight> flyWeights = new HashMap<>();
+	private final static Map<String, FlyWeight> FLY_WEIGHTS = new HashMap<>();
 
-  public FlyWeight factory(List<String> compositeStates) {
-    ConcreteCompositeFlyweight compositeFly = new ConcreteCompositeFlyweight();
-    for (String s : compositeStates) {
-      compositeFly.add(s, this.factory(s));
-    }
-    return compositeFly;
-  }
+	public FlyWeight factory(List<String> compositeStates) {
+		ConcreteCompositeFlyweight compositeFly = new ConcreteCompositeFlyweight();
+		for (String s : compositeStates) {
+			compositeFly.add(s, this.factory(s));
+		}
+		return compositeFly;
+	}
 
-  public FlyWeight factory(String s) {
-    FlyWeight fly = flyWeights.get(s);
-    if (fly == null) {
-      fly = new ConcreteFlyWeight(s);
-      flyWeights.put(s, fly);
-    }
-    return fly;
-  }
+	public FlyWeight factory(String s) {
+		return FLY_WEIGHTS.computeIfAbsent(s, ConcreteFlyWeight::new);
+	}
 }

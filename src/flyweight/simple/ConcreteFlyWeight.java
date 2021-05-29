@@ -11,19 +11,24 @@ package flyweight.simple;
 
 /**
  * 具体享元角色
- * 
+ *
  * @author changhao
  */
 public class ConcreteFlyWeight implements FlyWeight {
-  private String str;
 
-  public ConcreteFlyWeight(String str) {
-    this.str = str;
-  }
+	/**
+	 * 内蕴状态外部不可见
+	 */
+	private final String str;
 
-  @Override
-  public void operation(String state) {
-    System.out.println("内蕴状态：" + str);
-    System.out.println("外蕴状态：" + state);
-  }
+
+	public ConcreteFlyWeight(String str) {
+		this.str = str;
+	}
+
+	@Override
+	public void operation(String state) {
+		System.out.println("内蕴状态：" + str);
+		System.out.println("外蕴状态：" + state);
+	}
 }

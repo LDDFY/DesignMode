@@ -17,19 +17,20 @@ import java.math.BigDecimal;
  * @author changhao
  */
 public class Egg extends Condiment {
-  private Pancake pancake;
 
-  public Egg(Pancake pancake) {
-    this.pancake = pancake;
-  }
+	private final Pancake pancake;
 
-  @Override
-  public String getName() {
-    return pancake.getName().concat("，加鸡蛋");
-  }
+	public Egg(Pancake pancake) {
+		this.pancake = pancake;
+	}
 
-  @Override
-  public BigDecimal getPrice() {
-    return pancake.getPrice().add(BigDecimal.valueOf(1.5));
-  }
+	@Override
+	public String getName() {
+		return pancake.getName().concat("，加鸡蛋");
+	}
+
+	@Override
+	public BigDecimal getPrice() {
+		return pancake.getPrice().add(BigDecimal.valueOf(1.5));
+	}
 }

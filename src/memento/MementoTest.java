@@ -15,29 +15,30 @@ package memento;
  * @author wwwch
  */
 public class MementoTest {
-  public static void main(String[] args) {
-    // 原值
-    Originator originator = new Originator();
-    originator.setMagicValue(Integer.valueOf(36));
-    originator.setBloodValue(Integer.valueOf(80));
-    System.out.println("原值：\t");
-    originator.disPlay();
 
-    // 存档
-    System.out.println("存档...\t\n");
-    Caretaker caretaker = new Caretaker();
-    caretaker.setMemento(originator.saveMemento());
+	public static void main(String[] args) {
+		// 原值
+		Originator originator = new Originator();
+		originator.setMagicValue(36);
+		originator.setBloodValue(80);
+		System.out.println("原值:");
+		originator.disPlay();
 
-    // 修改原值
-    originator.setMagicValue(Integer.valueOf(26));
-    originator.setBloodValue(Integer.valueOf(50));
-    System.out.println("修改后：\t");
-    originator.disPlay();
+		// 存档
+		System.out.println("存档...");
+		Caretaker caretaker = new Caretaker();
+		caretaker.setMemento(originator.saveMemento());
 
-    // 恢复存档
-    System.out.println("恢复存档...\t\n");
-    originator.resetStore(caretaker.getMemento());
-    System.out.println("恢复后：\t");
-    originator.disPlay();
-  }
+		// 修改原值
+		originator.setMagicValue(26);
+		originator.setBloodValue(50);
+		System.out.println("修改后：");
+		originator.disPlay();
+
+		// 恢复存档
+		System.out.println("恢复存档...");
+		originator.resetStore(caretaker.getMemento());
+		System.out.println("恢复后:");
+		originator.disPlay();
+	}
 }

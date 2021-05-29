@@ -15,6 +15,7 @@ package bridge;
  * @author changhao
  */
 public class CementRoad extends Road {
+
   public CementRoad(Vehicle vehicle) {
     super(vehicle);
   }

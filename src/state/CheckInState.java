@@ -16,7 +16,7 @@ package state;
  */
 public class CheckInState implements State {
 
-  private Room hotelManagement;
+  private final Room hotelManagement;
 
   public CheckInState(Room hotelManagement) {
     this.hotelManagement = hotelManagement;

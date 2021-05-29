@@ -15,11 +15,14 @@ package decorator;
  * @author changhao
  */
 public class PancakeTest {
+
   public static void main(String[] args) {
     // 杂粮煎饼
     Pancake pancake = new CoarsePancake();
     // 加鸡蛋
     Condiment egg = new Egg(pancake);
+    //输出当前装饰信息
+    egg.sold();
     // 加火腿
     Condiment ham = new Ham(egg);
     // 输出当前装饰信息

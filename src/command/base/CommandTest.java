@@ -17,6 +17,7 @@ import command.Command;
  * @author changhao
  */
 public class CommandTest {
+
   public static void main(String[] args) {
     // 接收者角色（Receiver）
     AudioPlayer audioPlayer = new AudioPlayer();
@@ -36,4 +37,5 @@ public class CommandTest {
     keypad.rewind();
     keypad.stop();
   }
+
 }

@@ -23,6 +23,7 @@ import proxy.cglib.SubjectMethodInterceptor;
  * @author changhao
  */
 public class CglibProxyTest {
+
   public static void proxyTest() {
     CglibRealSubject subject = new CglibRealSubject();
     MethodInterceptor interceptor = new SubjectMethodInterceptor();

@@ -16,18 +16,18 @@ package mediator;
  */
 public class HouseOwner extends Person {
 
-  public HouseOwner(String name, Mediator meidator) {
-    super(name, meidator);
-  }
+	public HouseOwner(String name, Mediator mediator) {
+		super(name, mediator);
+	}
 
-  /**
-   * @param message
-   */
-  public void contact(String message) {
-    meidator.contact(message, this);
-  }
+	/**
+	 * @param message
+	 */
+	public void contact(String message) {
+		mediator.contact(message, this);
+	}
 
-  public void getMessage(String message) {
-    System.out.println("HouseOwner : " + name + ", Get Message: " + message);
-  }
+	public void getMessage(String message) {
+		System.out.println(name + ", Get Message: " + message);
+	}
 }

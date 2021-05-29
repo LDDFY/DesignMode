@@ -15,6 +15,7 @@ package flyweight.simple;
  * @author changhao
  */
 public class FlyWeightTest {
+
   public static void main(String[] args) {
     FlyWeightFactory factory = new FlyWeightFactory();
     FlyWeight f1 = factory.factory("a");
@@ -28,4 +29,5 @@ public class FlyWeightTest {
     System.out.println(f1 == f3);
     System.out.println(factory.size());
   }
+
 }

@@ -11,15 +11,16 @@ package observer.push;
 
 /**
  * 推模式具体观察者角色：ConcreteObserver
- * 
+ *
  * @author changhao
  */
 public class ConcreteObserver implements Observer {
-  private String msg;
 
-  @Override
-  public void update(String msg) {
-    this.msg = msg;
-    System.out.println("观察者收到信息为：" + msg);
-  }
+	private String msg;
+
+	@Override
+	public void update(String msg) {
+		this.msg = msg;
+		System.out.println("观察者收到信息为：" + this.msg);
+	}
 }

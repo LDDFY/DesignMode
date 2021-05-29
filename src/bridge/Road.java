@@ -10,17 +10,27 @@
 package bridge;
 
 /**
- * 抽象的路:Abstraction
+ * 抽象的路:Abstraction 修正抽象化角色
  *
  * @author changhao
  */
 public abstract class Road {
 
-  protected Vehicle vehicle;
 
-  public Road(Vehicle vehicle) {
-    this.vehicle = vehicle;
-  }
+	/**
+	 * 交通工具
+	 */
+	protected Vehicle vehicle;
 
-  abstract void driveOnRoad();
+	/**
+	 * 路
+	 */
+	public Road(Vehicle vehicle) {
+		this.vehicle = vehicle;
+	}
+
+	/**
+	 * 交通工具在路上的具体实现
+	 */
+	abstract void driveOnRoad();
 }

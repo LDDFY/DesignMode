@@ -9,38 +9,40 @@
  */
 package memento;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
- * Originator: 发起人
+ * 原发器Originator: 发起人
  *
  * @author wwwch
  */
-@Data
+@Getter
+@Setter
 public class Originator {
-  /**
-   * 血条
-   */
-  private int bloodValue;
-  /**
-   * 蓝条
-   */
-  private int magicValue;
+	/**
+	 * 血条
+	 */
+	private int bloodValue;
+	/**
+	 * 蓝条
+	 */
+	private int magicValue;
 
-  public void disPlay() {
-    System.out.println("血条：\t" + getBloodValue());
-    System.out.println("蓝条：\t" + getMagicValue() + "\n");
-  }
+	public void disPlay() {
+		System.out.println("血条：" + getBloodValue());
+		System.out.println("蓝条：" + getMagicValue());
+	}
 
-  public Memento saveMemento() {
-    Memento memento = new Memento();
-    memento.setBloodValue(getBloodValue());
-    memento.setMagicValue(getMagicValue());
-    return memento;
-  }
+	public Memento saveMemento() {
+		Memento memento = new Memento();
+		memento.setBloodValue(getBloodValue());
+		memento.setMagicValue(getMagicValue());
+		return memento;
+	}
 
-  public void resetStore(Memento memento) {
-    setBloodValue(memento.getBloodValue());
-    setMagicValue(memento.getMagicValue());
-  }
+	public void resetStore(Memento memento) {
+		setBloodValue(memento.getBloodValue());
+		setMagicValue(memento.getMagicValue());
+	}
 }

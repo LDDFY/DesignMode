@@ -10,7 +10,7 @@ public class StrategyTest {
     StrategyContext context = new StrategyContext(new TrainStrategy());
     context.travel();
 
-    context.setStrategy(new AirPlanelStrategy());
+    context.setStrategy(new AirPlanStrategy());
     context.travel();
   }
 }

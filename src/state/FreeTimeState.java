@@ -11,36 +11,36 @@ package state;
 
 /**
  * 空闲房间状态：状态具体实现类
- * 
+ *
  * @author changhao
  */
 public class FreeTimeState implements State {
 
-  private Room hotelManagement;
+	private final Room hotelManagement;
 
-  public FreeTimeState(Room hotelManagement) {
-    this.hotelManagement = hotelManagement;
-  }
+	public FreeTimeState(Room hotelManagement) {
+		this.hotelManagement = hotelManagement;
+	}
 
-  @Override
-  public void bookRoom() {
-    System.out.println("您已经预定成功了！");
-    this.hotelManagement.setState(this.hotelManagement.getBookedState());
-  }
+	@Override
+	public void bookRoom() {
+		System.out.println("您已经预定成功了！");
+		this.hotelManagement.setState(this.hotelManagement.getBookedState());
+	}
 
-  @Override
-  public void unsubscribeRoom() {
+	@Override
+	public void unsubscribeRoom() {
 
-  }
+	}
 
-  @Override
-  public void checkInRoom() {
-    System.out.println("您已经入住了！");
-    this.hotelManagement.setState(this.hotelManagement.getCheckInState());
-  }
+	@Override
+	public void checkInRoom() {
+		System.out.println("您已经入住了！");
+		this.hotelManagement.setState(this.hotelManagement.getCheckInState());
+	}
 
-  @Override
-  public void checkOutRoom() {
+	@Override
+	public void checkOutRoom() {
 
-  }
+	}
 }

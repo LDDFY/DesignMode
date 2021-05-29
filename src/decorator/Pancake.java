@@ -12,26 +12,27 @@ package decorator;
 import java.math.BigDecimal;
 
 /**
- * 抽象类：煎饼
+ * 抽象类：煎饼 (抽象构建角色)
  *
  * @author changhao
  */
 public abstract class Pancake {
-  protected String name;
 
-  /**
-   * 获取名称
-   *
-   * @return
-   */
-  public String getName() {
-    return this.name;
-  }
+	protected String name;
 
-  /**
-   * 获取价格
-   *
-   * @return
-   */
-  public abstract BigDecimal getPrice();
+	/**
+	 * 获取名称
+	 *
+	 * @return
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * 获取价格
+	 *
+	 * @return
+	 */
+	public abstract BigDecimal getPrice();
 }

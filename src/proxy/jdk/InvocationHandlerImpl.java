@@ -9,10 +9,10 @@
  */
 package proxy.jdk;
 
+import proxy.base.Subject;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-
-import proxy.base.Subject;
 
 /**
  * jdk动态代理执行器
@@ -20,17 +20,18 @@ import proxy.base.Subject;
  * @author changhao
  */
 public class InvocationHandlerImpl implements InvocationHandler {
-  private Subject subject;
 
-  public InvocationHandlerImpl(Subject subject) {
-    this.subject = subject;
-  }
+	private final Subject subject;
 
-  @Override
-  public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-    System.out.println("InvocationHandler 执行：" + method.getName() + "方法...\t\n");
-    method.invoke(subject, args);
-    System.out.println("InvocationHandler 执行：" + method.getName() + "完毕...\t\n");
-    return null;
-  }
+	public InvocationHandlerImpl(Subject subject) {
+		this.subject = subject;
+	}
+
+	@Override
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+		System.out.println("InvocationHandler 执行：" + method.getName() + "方法...");
+		method.invoke(subject, args);
+		System.out.println("InvocationHandler 执行：" + method.getName() + "完毕...");
+		return null;
+	}
 }

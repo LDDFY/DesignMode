@@ -9,7 +9,7 @@
  */
 package adapter.object;
 
-import adapter.Adaptee;
+import adapter.Adaptor;
 import adapter.Target;
 
 /**
@@ -18,16 +18,17 @@ import adapter.Target;
  * @author changhao
  */
 public class ObjectAdapter implements Target {
-  private Adaptee adaptee;
 
-  public ObjectAdapter(Adaptee adaptee) {
-    this.adaptee = adaptee;
+  private Adaptor adaptor;
+
+  public ObjectAdapter(Adaptor adaptor) {
+    this.adaptor = adaptor;
   }
 
   @Override
   public void request() {
     System.out.println("对象适配器开始适配...\t\n");
-    this.adaptee.specificRequest();
+    this.adaptor.specificRequest();
     System.out.println("对象适配器适配结束...\t\n");
   }
 }

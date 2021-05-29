@@ -16,14 +16,14 @@ import command.Command;
  */
 public class RewindCommand implements Command {
 
-  private AudioPlayer player;
+	private final AudioPlayer player;
 
-  public RewindCommand(AudioPlayer player) {
-    this.player = player;
-  }
+	public RewindCommand(AudioPlayer player) {
+		this.player = player;
+	}
 
-  @Override
-  public void execute() {
-    player.rewind();
-  }
+	@Override
+	public void execute() {
+		player.rewind();
+	}
 }

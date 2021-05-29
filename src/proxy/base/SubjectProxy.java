@@ -10,22 +10,22 @@
 package proxy.base;
 
 /**
- * Subject代理类
+ * Subject代理类 -代理角色
  *
  * @author changhao
  */
 public class SubjectProxy implements Subject {
 
-  private Subject subject;
+	private final Subject subject;
 
-  public SubjectProxy(Subject subject) {
-    this.subject = subject;
-  }
+	public SubjectProxy(Subject subject) {
+		this.subject = subject;
+	}
 
-  @Override
-  public void doSomething() {
-    System.out.println("SubjectProxy 执行 doSomething 方法...\t\n");
-    subject.doSomething();
-    System.out.println("SubjectProxy 执行完毕...\t\n");
-  }
+	@Override
+	public void doSomething() {
+		System.out.println("SubjectProxy 执行 doSomething 方法...");
+		subject.doSomething();
+		System.out.println("SubjectProxy 执行完毕...");
+	}
 }

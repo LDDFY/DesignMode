@@ -15,11 +15,12 @@ package mediator;
  * @author changhao
  */
 public abstract class Person {
-  protected String name;
-  protected Mediator meidator;
 
-  public Person(String name, Mediator meidator) {
-    this.name = name;
-    this.meidator = meidator;
-  }
+	protected final String name;
+	protected final Mediator mediator;
+
+	public Person(String name, Mediator mediator) {
+		this.name = name;
+		this.mediator = mediator;
+	}
 }

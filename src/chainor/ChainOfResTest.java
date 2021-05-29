@@ -8,6 +8,7 @@ import java.math.BigDecimal;
  * @author LDDFY
  */
 public class ChainOfResTest {
+
   public static void main(String[] args) {
     DeptHandler deptHandler = new DeptHandler();
     ProjectHandler projectHandler = new ProjectHandler();

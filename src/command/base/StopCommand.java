@@ -18,14 +18,14 @@ import command.Command;
  */
 public class StopCommand implements Command {
 
-  private AudioPlayer player;
+	private final AudioPlayer player;
 
-  public StopCommand(AudioPlayer player) {
-    this.player = player;
-  }
+	public StopCommand(AudioPlayer player) {
+		this.player = player;
+	}
 
-  @Override
-  public void execute() {
-    player.stop();
-  }
+	@Override
+	public void execute() {
+		player.stop();
+	}
 }

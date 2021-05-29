@@ -16,8 +16,9 @@ package command;
  */
 public interface Command {
 
-  /**
-   * 执行
-   */
-  void execute();
+	/**
+	 * 执行
+	 */
+	void execute();
+
 }

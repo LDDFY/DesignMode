@@ -13,18 +13,22 @@ import command.Command;
 
 /**
  * 宏命令接口
- * 
+ *
  * @author changhao
  */
 public interface MacroCommand extends Command {
 
-  /**
-   * 添加命令
-   */
-  void add(Command command);
+	/**
+	 * 添加命令
+	 *
+	 * @param command 命令
+	 */
+	void add(Command command);
 
-  /**
-   * 删除命令
-   */
-  void remove(Command command);
+	/**
+	 * 删除命令
+	 *
+	 * @param command 命令
+	 */
+	void remove(Command command);
 }

@@ -14,9 +14,9 @@ package adapter;
  *
  * @author changhao
  */
-public class Adaptee {
+public class Adaptor {
 
-  public void specificRequest() {
-    System.out.println("被适配请求...\t\n");
-  }
+	public void specificRequest() {
+		System.out.println("被适配请求...\t\n");
+	}
 }

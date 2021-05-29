@@ -6,6 +6,7 @@ package factory.methodfactory;
  * @author changhao
  */
 public class ProductAFactory extends MethodFactory {
+
   @Override
   public Product create() {
     return new ProductA();

@@ -9,14 +9,20 @@
  */
 package memento;
 
-import lombok.Data;
-
 /**
  * Caretaker:管理人
  *
  * @author wwwch
  */
-@Data
 public class Caretaker {
-  private Memento memento;
+
+	private Memento memento;
+
+	public Memento getMemento() {
+		return memento;
+	}
+
+	public void setMemento(Memento memento) {
+		this.memento = memento;
+	}
 }

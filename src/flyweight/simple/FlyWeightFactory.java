@@ -14,23 +14,23 @@ import java.util.Map;
 
 /**
  * 享元工厂类
- * 
+ *
  * @author changhao
  */
 public class FlyWeightFactory {
 
-  public static final Map<String, ConcreteFlyWeight> flyWeights = new HashMap<>(128);
+	private static final Map<String, ConcreteFlyWeight> FLY_WEIGHTS = new HashMap<>(128);
 
-  public ConcreteFlyWeight factory(String str) {
-    ConcreteFlyWeight flyweight = flyWeights.get(str);
-    if (null == flyweight) {
-      flyweight = new ConcreteFlyWeight(str);
-      flyWeights.put(str, flyweight);
-    }
-    return flyweight;
-  }
+	public ConcreteFlyWeight factory(String str) {
+		ConcreteFlyWeight flyweight = FLY_WEIGHTS.get(str);
+		if (null == flyweight) {
+			flyweight = new ConcreteFlyWeight(str);
+			FLY_WEIGHTS.put(str, flyweight);
+		}
+		return flyweight;
+	}
 
-  public int size() {
-    return flyWeights.size();
-  }
+	public int size() {
+		return FLY_WEIGHTS.size();
+	}
 }

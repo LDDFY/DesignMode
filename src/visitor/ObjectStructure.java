@@ -20,7 +20,7 @@ import java.util.Random;
  */
 public class ObjectStructure {
   public static List<Element> getList() {
-    List<Element> list = new ArrayList();
+    List<Element> list = new ArrayList<>();
     Random ran = new Random();
     for (int i = 0; i < 10; i++) {
       int a = ran.nextInt(100);

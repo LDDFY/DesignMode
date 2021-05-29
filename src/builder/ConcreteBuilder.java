@@ -16,32 +16,32 @@ package builder;
  */
 public class ConcreteBuilder implements Builder {
 
-  private Plane plane;
+	private final Plane plane;
 
-  public ConcreteBuilder() {
-    plane = new Plane();
-  }
+	public ConcreteBuilder() {
+		plane = new Plane();
+	}
 
-  @Override
-  public void buildeWheel() {
-    System.out.println("安装轮子...\t\n");
-    plane.setWheel("轮子");
-  }
+	@Override
+	public void buildWheel() {
+		System.out.println("安装轮子...\t\n");
+		plane.setWheel("轮子");
+	}
 
-  @Override
-  public void buildeEngine() {
-    System.out.println("安装引擎...\t\n");
-    plane.setEngine("引擎");
-  }
+	@Override
+	public void buildEngine() {
+		System.out.println("安装引擎...\t\n");
+		plane.setEngine("引擎");
+	}
 
-  @Override
-  public void buildeStructure() {
-    System.out.println("安装主题结构...\t\n");
-    plane.setStructure("主题结构");
-  }
+	@Override
+	public void buildStructure() {
+		System.out.println("安装主题结构...\t\n");
+		plane.setStructure("主题结构");
+	}
 
-  @Override
-  public Plane builde() {
-    return plane;
-  }
+	@Override
+	public Plane build() {
+		return plane;
+	}
 }

@@ -17,6 +17,7 @@ import java.math.BigDecimal;
  * @author changhao
  */
 public class CoarsePancake extends Pancake {
+
   public CoarsePancake() {
     this.name = "杂粮煎饼";
   }
